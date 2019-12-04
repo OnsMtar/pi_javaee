@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:f="http://java.sun.com/jsf/core" 
+xmlns:h="http://java.sun.com/jsf/html" 
+xmlns:ui="http://java.sun.com/jsf/facelets">
+ <body>
+ <h:panelGroup columns="2">
+		<h:form>
+		<h:dataTable value="#{clientPhysiqueBean.clientsphy}" var="c" border="1">
+		<h:column><f:facet name="header"><h:outputText value="Login" /></f:facet>
+		<h:outputText value="#{c.mail}" /></h:column>
+							
+		<h:column><f:facet name="header"><h:outputText value="Prenom" /></f:facet>
+	    <h:outputText value="#{c.prenom}" /></h:column>
+							
+		<h:column><f:facet name="header"><h:outputText value="Nom" /></f:facet>
+		<h:outputText value="#{c.nom}}" /></h:column>
+							
+		<h:column><f:facet name="header"><h:outputText value="adresse" /></f:facet>
+		<h:outputText value="#{c.adresse}" /></h:column>
+							
+		<h:column><f:facet name="header"><h:outputText value="numTel" /></f:facet>
+		<h:outputText value=" #{c.numTel}" /></h:column>
+		
+		<h:column><f:facet name="header"><h:outputText value="password" /></f:facet>
+		<h:outputText value=" #{c.password}" /></h:column>					
+			
+			<h:column><f:facet name="header"><h:outputText value="date" /></f:facet>
+		<h:outputText value=" #{c.dateNaissance}" /></h:column>	
+		
+				
+			</h:dataTable>
+			</h:form>
+		</h:panelGroup>
+    </body>
+    </html>

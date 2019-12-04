@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:f="http://java.sun.com/jsf/core" 
+xmlns:h="http://java.sun.com/jsf/html" 
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<body>
+  <h:form id="form"> 
+  
+  <h:panelGrid columns="2">
+   <h:outputText value="Login" /> 
+   <h:inputText value="#{clientPhysiqueBean.mail}" /> 
+   <h:outputText value="Mot de passe" /> 
+   <h:inputSecret value="#{clientPhysiqueBean.password}" /> 
+   <h:outputText value="adresse" /> 
+   <h:inputText value="#{clientPhysiqueBean.adresse}" /> 
+   <h:outputText value="numtel" /> 
+   <h:inputText value="#{clientPhysiqueBean.numTel}" /> 
+   <h:outputText value="nom" /> 
+   <h:inputText value="#{clientPhysiqueBean.nom}" /> 
+   <h:outputText value="prenom" /> 
+   <h:inputText value="#{clientPhysiqueBean.prenom}" /> 
+   <h:outputText value="date" />
+   <h:inputText value="#{clientPhysiqueBean.dateNaissance}" required="true">
+					<f:convertDateTime pattern="yyyy/MM/dd" />
+					</h:inputText>
+   
+   <h:commandButton id="btn" value="ajouter" action="#{clientPhysiqueBean.addClientPhy()}" />
+    <h:message for="btn"/> 
+    </h:panelGrid> 
+    </h:form> 
+    
+    
+    
+   
+    
+    
+    
+ </body>
+ </html>
