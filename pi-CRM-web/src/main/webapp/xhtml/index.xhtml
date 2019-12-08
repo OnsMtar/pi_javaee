@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/Template/TemplateFront.xhtml">
+
+	<ui:define name="title">
+		<title>CRM</title>
+	</ui:define>
+
+	<ui:define name="content">
+	<script type="text/javascript">
+
+function a(){
+    if (document.getElementById('j_idt18:j_idt30:0').checked) {
+        document.getElementById('test1').style.display = 'block';
+    } else {
+        document.getElementById('test1').style.display = 'none';
+    }
+}
+</script>
+		<!-- Start My Account Area -->
+		<section class="my_account_area pt--80 pb--55 bg--white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-12">
+					<div class="my__account__wrapper">
+						<h3 class="account__title">Login</h3>
+						<h:form action="#">
+							<div class="account__form">
+								<div class="input__box">
+									<label>email address <span>*</span></label>
+									<h:inputText value="#{loginBean.mail}" />
+								</div>
+								<div class="input__box">
+									<label>Password<span>*</span></label>
+									<h:inputSecret value="#{loginBean.password}" />
+								</div>
+								<div class="form__btn">
+									<h:commandButton value="Login" action="#{loginBean.signIn()}"
+										style="background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #333;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 2px 20px 0;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+" />
+								</div>
+								<h:commandButton value="password Reset" action="#{loginBean.PasswordReset()}" class="forget_pass" href="#"/>
+							</div>
+						</h:form>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="my__account__wrapper">
+						<h3 class="account__title">Register</h3>
+						<h:form >
+							<div class="account__form">
+								<div class="input__box">
+									<label>Email address <span>*</span></label>
+									<h:inputText value="#{loginBean.newMail}" />
+								</div>
+								<div class="input__box">
+									<label>Password<span>*</span></label>
+									<h:inputSecret value="#{loginBean.newPassword}" />
+								</div>
+								<div class="input__box">
+									<label>Num telephone <span>*</span></label>
+									<h:inputText value="#{loginBean.newNum}" required="true"/>
+								</div>
+								<div class="input__box">
+									<label>Nom <span>*</span></label>
+									<h:inputText value="#{loginBean.newNom}" />
+								</div>
+								<div class="input__box">
+									<label>Addresse <span>*</span></label>
+									<h:inputText value="#{loginBean.newAdresse}" />
+								</div>
+
+								<h:selectOneRadio  value="#{loginBean.formType}" onchange="a()">
+									<f:selectItem id="b1" itemValue="1" itemLabel="Personne Morale"
+										style="padding-left:10px;" />
+									<f:selectItem id="b2" itemValue="2" itemLabel="Personne physique"
+										style="padding-left:10px;" />
+
+								</h:selectOneRadio>
+								<div id="test1">
+								<h:panelGroup layout="block" class="input__box"  rendered="#{loginBean.formType eq '1'}" >
+									<label>Code Fiscale <span>*</span></label>
+									<h:inputText value="#{loginBean.newClientMoral.codeFiscal}" />
+								</h:panelGroup>
+								</div>
+								<h:panelGroup id="test2" layout="block" class="input__box"  rendered="#{loginBean.formType eq '2'}" >
+									<label>prenom <span>*</span></label>
+									<h:inputText value="#{loginBean.newClientPhysique.prenom}" />
+								</h:panelGroup>
+								<div class="form__btn">
+									<h:commandButton value="Register" action="#{loginBean.Register()}"
+										style="background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #333;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 2px 20px 0;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+" />
+								</div>
+							</div>
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+
+	</ui:define>
+</ui:composition>

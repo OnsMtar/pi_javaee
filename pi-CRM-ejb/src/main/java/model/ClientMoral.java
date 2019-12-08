@@ -30,6 +30,8 @@ public class ClientMoral implements Serializable {
 	private int numTel;
 
 	private String password;
+	
+	private int statut;
 
 	//bi-directional many-to-one association to Commentaire
 	@OneToMany(mappedBy="clientMoral")
@@ -203,5 +205,15 @@ public class ClientMoral implements Serializable {
 
 		return reclamation;
 	}
+
+	public int getStatut() {
+		return statut;
+	}
+
+	public void setStatut(int statut) {
+		this.statut = statut;
+	}
+	
+	
 
 }

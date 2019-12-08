@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/Template/TemplateBack.xhtml">
+
+	<ui:define name="title">
+		<title>CRM</title>
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="content-wrapper">
+			<div class="content custom-scrollbar ps">
+
+				<div id="e-commerce-products" class="page-layout carded full-width">
+
+					<div class="top-bg bg-primary"></div>
+
+					<!-- CONTENT -->
+					<div class="page-content-wrapper">
+
+						<!-- HEADER -->
+						<div
+							class="page-header light-fg row no-gutters align-items-center justify-content-between">
+
+
+						</div>
+						<!-- / HEADER -->
+
+						<div class="page-content-card">
+
+							<div id="e-commerce-products-table_wrapper"
+								class="dataTables_wrapper no-footer">
+								<div class="dataTables_scroll">
+									<div class="dataTables_scrollHead"
+										style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+										<div class="dataTables_scrollHeadInner"
+											style="box-sizing: content-box; width: 1161.6px; padding-right: 14px;">
+											<table class="table dataTable no-footer" role="grid"
+												style="margin-left: 0px; width: 1161.6px;">
+												<thead>
+													<tr role="row">
+														<th class="sorting_asc" tabindex="0"
+															aria-controls="e-commerce-products-table" rowspan="1"
+															colspan="1" style="width: 72px;" aria-sort="ascending"
+															aria-label="
+                                                
+                                                    ID
+                                                
+                                            : activate to sort column descending">
+															<div class="table-header">
+																<span class="column-title">ID</span>
+															</div>
+														</th>
+														<th class="sorting_disabled" rowspan="1" colspan="1"
+															style="width: 80px;"
+															aria-label="
+                                                
+                                                    Image
+                                                
+                                            ">
+															<div class="table-header">
+																<span class="column-title">Nom</span>
+															</div>
+														</th>
+														<th class="sorting" tabindex="0"
+															aria-controls="e-commerce-products-table" rowspan="1"
+															colspan="1"
+															aria-label="
+                                                
+                                                    Name
+                                                
+                                            : activate to sort column ascending"
+															style="width: 181.6px;">
+															<div class="table-header">
+																<span class="column-title">Matricule</span>
+															</div>
+														</th>
+														<th class="sorting" tabindex="0"
+															aria-controls="e-commerce-products-table" rowspan="1"
+															colspan="1"
+															aria-label="
+                                                
+                                                    Category
+                                                
+                                            : activate to sort column ascending"
+															style="width: 165.6px;">
+															<div class="table-header">
+																<span class="column-title">adresse</span>
+															</div>
+														</th>
+														<th class="sorting" tabindex="0"
+															aria-controls="e-commerce-products-table" rowspan="1"
+															colspan="1"
+															aria-label="
+                                                
+                                                    Price
+                                                
+                                            : activate to sort column ascending"
+															style="width: 121.6px;">
+															<div class="table-header">
+																<span class="column-title">mail</span>
+															</div>
+														</th>
+														
+																												<th class="sorting" tabindex="0"
+															aria-controls="e-commerce-products-table" rowspan="1"
+															colspan="1"
+															aria-label="
+                                                
+                                                    Price
+                                                
+                                            : activate to sort column ascending"
+															style="width: 121.6px;">
+															<div class="table-header">
+																<span class="column-title">numero</span>
+															</div>
+														</th>
+														
+														
+														<th class="sorting_disabled" rowspan="1" colspan="1"
+															aria-label="
+                                                
+                                                    Actions
+                                                
+                                            "
+															style="width: 103.2px;">
+															<div class="table-header">
+																<span class="column-title">Actions</span>
+															</div>
+														</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
+									<div class="dataTables_scrollBody"
+										style="position: relative; overflow: auto; width: 100%;">
+										<table id="e-commerce-products-table"
+											class="table dataTable no-footer dtr-inline" role="grid"
+											aria-describedby="e-commerce-products-table_info"
+											style="width: 100%;">
+											<thead>
+												<tr role="row" style="height: 0px;">
+													<th class="sorting_asc"
+														aria-controls="e-commerce-products-table" rowspan="1"
+														colspan="1"
+														style="width: 72px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+														aria-sort="ascending"
+														aria-label="
+                                                
+                                                    ID
+                                                
+                                            : activate to sort column descending"><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">ID</span>
+															</div>
+														</div></th>
+													<th class="sorting_disabled" rowspan="1" colspan="1"
+														style="width: 80px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+														aria-label="
+                                                
+                                                    Image
+                                                
+                                            "><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">Nom</span>
+															</div>
+														</div></th>
+													<th class="sorting"
+														aria-controls="e-commerce-products-table" rowspan="1"
+														colspan="1"
+														aria-label="
+                                                
+                                                    Nom
+                                                
+                                            : activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 181.6px;"><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">matricule</span>
+															</div>
+														</div></th>
+													<th class="sorting"
+														aria-controls="e-commerce-products-table" rowspan="1"
+														colspan="1"
+														aria-label="
+                                                
+                                                    Category
+                                                
+                                            : activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 165.6px;"><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">adresse</span>
+															</div>
+														</div></th>
+													<th class="sorting"
+														aria-controls="e-commerce-products-table" rowspan="1"
+														colspan="1"
+														aria-label="
+                                                
+                                                    Price
+                                                
+                                            : activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 121.6px;"><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">mail</span>
+															</div>
+														</div></th>
+														
+																											<th class="sorting"
+														aria-controls="e-commerce-products-table" rowspan="1"
+														colspan="1"
+														aria-label="
+                                                
+                                                    Price
+                                                
+                                            : activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 121.6px;"><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">numero</span>
+															</div>
+														</div></th>
+
+													<th class="sorting_disabled" rowspan="1" colspan="1"
+														aria-label="
+                                                
+                                                    Actions
+                                                
+                                            "
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 103.2px;"><div
+															class="dataTables_sizing"
+															style="height: 0; overflow: hidden;">
+															<div class="table-header">
+																<span class="column-title">Actions</span>
+															</div>
+														</div></th>
+												</tr>
+											</thead>
+
+
+											<tbody>
+
+												<h:form>
+													<ui:repeat value="#{accountsBean.listClientMoral}"
+														var="client">
+														<tr role="row" class="odd">
+															<td tabindex="0" class="sorting_1">#{client.id}</td>
+															<td tabindex="0" class="sorting_1">#{client.nom}</td>
+															<td>#{client.codeFiscal}</td>
+															<td>#{client.adresse}</td>
+															<td>#{client.mail}</td>
+															<td>#{client.numTel}</td>
+															<td><h:commandLink   value="delete" action="#{accountsBean.deleteCM(client.id)}" style="margin-left: 5px;"
+																	class="btn " 
+																	aria-label="Product details"/>
+																	<h:commandLink   value="Activate" action="#{accountsBean.activateCM(client.id)}" style="background-color: green;
+   																		 margin-top: 5px;" rendered="#{client.statut eq 0}"
+																	class="btn " 
+																	aria-label="Product details"/>
+																	
+															</td>
+														</tr>
+													</ui:repeat>
+												</h:form>
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="dataTables_footer">
+									<div class="dataTables_info"
+										id="e-commerce-products-table_info" role="status"
+										aria-live="polite">Showing 1 to 10 of 20 entries</div>
+									<div class="dataTables_paginate paging_simple_numbers"
+										id="e-commerce-products-table_paginate">
+										<a class="paginate_button previous disabled"
+											aria-controls="e-commerce-products-table" data-dt-idx="0"
+											tabindex="0" id="e-commerce-products-table_previous">Previous</a><span><a
+											class="paginate_button current"
+											aria-controls="e-commerce-products-table" data-dt-idx="1"
+											tabindex="0">1</a><a class="paginate_button "
+											aria-controls="e-commerce-products-table" data-dt-idx="2"
+											tabindex="0">2</a></span><a class="paginate_button next"
+											aria-controls="e-commerce-products-table" data-dt-idx="3"
+											tabindex="0" id="e-commerce-products-table_next">Next</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- / CONTENT -->
+				</div>
+
+				<script type="text/javascript"
+					src="../assets/js/apps/e-commerce/products/products.js"></script>
+
+				<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+					<div class="ps__thumb-x" tabindex="0"
+						style="left: 0px; width: 0px;"></div>
+				</div>
+				<div class="ps__rail-y" style="top: 0px; right: 0px;">
+					<div class="ps__thumb-y" tabindex="0"
+						style="top: 0px; height: 0px;"></div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</ui:define>
+</ui:composition>

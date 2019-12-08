@@ -36,36 +36,11 @@ public class ClientPhysique implements Serializable {
 
 	private String prenom;
 	
-	
-	
-	//constructeur
-	
+	private int statut;
 
 	//bi-directional many-to-one association to Commentaire
 	@OneToMany(mappedBy="clientPhysique")
 	private List<Commentaire> commentaires;
-
-	public ClientPhysique(String adresse, String mail, String nom, int numTel, String password, String prenom) {
-		super();
-		this.adresse = adresse;
-		this.mail = mail;
-		this.nom = nom;
-		this.numTel = numTel;
-		this.password = password;
-		this.prenom = prenom;
-	}
-
-	public ClientPhysique(String adresse, Date dateNaissance, String mail, String nom, int numTel, String password,
-			String prenom) {
-		super();
-		this.adresse = adresse;
-		this.dateNaissance = dateNaissance;
-		this.mail = mail;
-		this.nom = nom;
-		this.numTel = numTel;
-		this.password = password;
-		this.prenom = prenom;
-	}
 
 	//bi-directional many-to-one association to Devi
 	@OneToMany(mappedBy="clientPhysique")
@@ -236,9 +211,15 @@ public class ClientPhysique implements Serializable {
 		return reclamation;
 	}
 
-	public Date getDateNaissance() {
-		return dateNaissance;
+	public int getStatut() {
+		return statut;
 	}
 
+	public void setStatut(int statut) {
+		this.statut = statut;
+	}
+
+
 	
+
 }
